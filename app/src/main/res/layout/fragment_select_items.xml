@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/service_list"
+    android:orientation="vertical"
+    android:padding="@dimen/_15sdp">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_select_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/_10sdp" />
+
+    <com.imakancustomer.utils.CustomerTextViewRegular
+        android:id="@+id/tv_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/no_data"
+        android:textColor="@color/colorDarkGray"
+        android:textSize="@dimen/_14ssp"
+        android:visibility="gone" />
+</LinearLayout>

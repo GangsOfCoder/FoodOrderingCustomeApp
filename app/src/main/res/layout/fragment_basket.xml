@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/review"
+    android:orientation="vertical"
+    tools:context=".ui.basket.BasketFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.imakancustomer.utils.CustomerTextViewRegular
+            android:id="@+id/tv_service_add"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/colorHintGray"
+            android:gravity="center"
+            android:text="@string/str_use_promo_code"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_10ssp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_10ssp">
+
+            <com.imakancustomer.utils.CustomerTextViewBold
+                android:id="@+id/tv_restaurant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fiorio Thai Food"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_15ssp" />
+
+            <com.imakancustomer.utils.CustomerTextViewBold
+                android:id="@+id/tv_restaurant_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#121 sector 16, panchkula"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_13ssp" />
+        </LinearLayout>
+
+        <!--BOOKING ITEM LIST -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_item_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/colorWhiteTransparent2"
+            android:visibility="visible"
+            tools:itemCount="2"
+            tools:listitem="@layout/adapter_basket_item" />
+
+        <!--PICK UP AND DELIVERY ADDRESS BLOCK -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:orientation="vertical">
+
+                <com.imakancustomer.utils.CustomerTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_pickup_delivery_address"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12ssp" />
+
+                <com.imakancustomer.utils.CustomerTextViewRegular
+                    android:id="@+id/tv_delivery_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_dummy_data"
+                    android:textColor="@color/colorGray2"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="10"
+                android:src="@drawable/ic_edit_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--CONTACT NUMBER BLOCK -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:orientation="vertical">
+
+                <com.imakancustomer.utils.CustomerTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_contact_number"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12ssp" />
+
+                <com.imakancustomer.utils.CustomerTextViewRegular
+                    android:id="@+id/tv_contact_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0172-12345841"
+                    android:textColor="@color/colorGray2"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="10"
+                android:src="@drawable/ic_edit_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--PERSONAL REQUEST BLOCK -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+
+            <com.imakancustomer.utils.CustomerTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_personal_request"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.imakancustomer.utils.CustomerEditText
+                android:id="@+id/et_personal_msg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="@string/str_type_your_message_here"
+                android:textColor="@color/colorGray2"
+                android:textSize="@dimen/_10ssp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <com.imakancustomer.utils.CustomerTextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/str_total"
+                android:textColor="@color/colorGray2" />
+
+            <com.imakancustomer.utils.CustomerTextViewBold
+                android:id="@+id/tv_basket_total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="RM 35.00"
+                android:textColor="@color/colorBlack" />
+
+        </RelativeLayout>
+
+        <com.imakancustomer.utils.CustomerButton
+            android:id="@+id/btn_basket_checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/side_nav_bar"
+            android:text="@string/str_proceed_to_checkout"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+</ScrollView>

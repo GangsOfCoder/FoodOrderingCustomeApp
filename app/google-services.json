@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "667995985744",
+    "firebase_url": "https://imakancustomer.firebaseio.com",
+    "project_id": "imakancustomer",
+    "storage_bucket": "imakancustomer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667995985744:android:d2c5466a52e91597",
+        "android_client_info": {
+          "package_name": "com.imakancustomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667995985744-31nt0cd60f1qegvla8elekfnhk2i1qmd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKqMtpkaV6dZ4wuZSPRcm3q3gqqVGuabE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

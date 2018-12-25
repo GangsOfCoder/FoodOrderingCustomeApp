@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_service_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/rb_al_tick"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <com.imakancustomer.utils.CustomerTextViewBold
+            android:id="@+id/tv_al_namenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10ssp"
+            tools:text="Adam Smith-98765485654" />
+
+        <com.imakancustomer.utils.CustomerTextViewRegular
+            android:id="@+id/tv_al_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="@dimen/_12ssp"
+            tools:text="#221,Sector 21 Panchkula" />
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/rb_al_tick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/img_al_delete"
+        android:textColor="@color/colorWhite"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/img_al_delete"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/delete" />
+
+
+</RelativeLayout>

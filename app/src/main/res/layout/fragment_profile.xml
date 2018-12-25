@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/img_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dummyuser" />
+
+                <ImageView
+                    android:id="@+id/uplaod_img"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_alignBottom="@+id/img_profile"
+                    android:layout_alignRight="@+id/img_profile"
+                    android:background="@drawable/upload"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+
+            <!-- INPUT FIELD LAYOUT-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@color/colorWhiteTransparent"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
+
+                <com.imakancustomer.utils.CustomerTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/str_name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_14ssp" />
+
+                <com.imakancustomer.utils.CustomerEditText
+                    android:id="@+id/et_profile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@null"
+                    android:hint="@string/str_enter_name_here"
+                    android:inputType="text"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_12ssp" />
+
+                <com.imakancustomer.utils.CustomerTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/str_phone_number"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_14ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp_profile_countrycode"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:hint="@string/countrycode"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        app:ccp_showFlag="false"
+                        app:ccp_showFullName="false"
+                        app:ccp_showNameCode="false"
+                        app:ccp_textSize="18sp" />
+
+                    <com.imakancustomer.utils.CustomerEditText
+                        android:id="@+id/et_profile_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@null"
+                        android:hint="@string/str_enter_number"
+                        android:inputType="phone"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_12ssp" />
+                </LinearLayout>
+
+                <com.imakancustomer.utils.CustomerTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/str_email"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_14ssp" />
+
+                <com.imakancustomer.utils.CustomerEditText
+                    android:id="@+id/et_profile_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@null"
+                    android:hint="@string/str_enter_email"
+                    android:inputType="text"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_12ssp" />
+
+
+                <!-- GOOGLE MAP BLOCK -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_170sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="#ffffff">
+
+                    <fragment
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true" />
+
+                    <ImageView
+                        android:id="@+id/iv_location_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/location" />
+
+                </RelativeLayout>
+                <!-- ADDRESS BLOCK  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.imakancustomer.utils.CustomerTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Address"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <com.imakancustomer.utils.CustomerEditText
+                        android:id="@+id/et_profile_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@null"
+                        android:padding="@dimen/_8sdp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <com.imakancustomer.utils.CustomerTextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:text="@string/str_town_city"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_14ssp" />
+
+                        <com.imakancustomer.utils.CustomerTextViewBold
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:text="@string/str_postal_code_zip"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_14ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <com.imakancustomer.utils.CustomerEditText
+                            android:id="@+id/et_profile_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight="50"
+                            android:background="@null"
+                            android:padding="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <com.imakancustomer.utils.CustomerEditText
+                            android:id="@+id/et_profile_postalcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight="50"
+                            android:background="@null"
+                            android:imeOptions="actionDone"
+                            android:padding="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <com.imakancustomer.utils.CustomerTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/str_register_on"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_14ssp" />
+
+                <com.imakancustomer.utils.CustomerEditText
+                    android:id="@+id/et_profile_registerdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@null"
+                    android:hint="#221 sector 21"
+                    android:inputType="number"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+            <com.imakancustomer.utils.CustomerButton
+                android:id="@+id/btn_profile_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@color/colorGreen"
+                android:text="@string/str_update"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

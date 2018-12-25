@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashboard"
+    android:orientation="vertical"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- TOP BLOCK -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+            <!--TOTAL NUMBER OF BOOKINGS -->
+            <LinearLayout
+                android:id="@+id/ll_dashboard_total_booking"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="50"
+                android:background="@color/colorGreen"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
+
+                <com.imakancustomer.utils.CustomerTextViewRegular
+                    android:id="@+id/tv_dashboard_total_booking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_25ssp"
+                    tools:text="51" />
+
+                <com.imakancustomer.utils.CustomerTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="@string/str_total_number_of_bookings"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_15ssp" />
+            </LinearLayout>
+            <!-- FAVOURITE RESTAURANT -->
+            <LinearLayout
+                android:id="@+id/ll_dashboard_fav_restaurant"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="50"
+                android:background="@color/colorGreen"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
+
+                <com.imakancustomer.utils.CustomerTextViewBold
+                    android:id="@+id/tv_dashboard_total_fav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_25ssp"
+                    tools:text="51" />
+
+                <com.imakancustomer.utils.CustomerTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="@string/str_favourite_restaurant"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_15ssp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.imakancustomer.utils.CustomerTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/str_recent_bookings"
+            android:textColor="@color/colorWhite" />
+
+        <!-- Recent Booking-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_recent_booking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/colorWhiteTransparent3"
+            android:visibility="visible"
+            tools:listitem="@layout/adapter_recent_booking" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/ll_loader"
+        layout="@layout/layout_material_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</RelativeLayout>

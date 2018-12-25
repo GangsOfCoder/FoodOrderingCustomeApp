@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sign_in"
+    android:isScrollContainer="false"
+    android:overScrollMode="never"
+    tools:context=".ui.login.LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <!-- SIGN IN -->
+        <com.imakancustomer.utils.CustomerTextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/str_sign_in"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_20ssp" />
+
+        <!-- ENTER YOUR DETAILS -->
+        <com.imakancustomer.utils.CustomerTextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/str_signup_hint"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_15ssp" />
+
+        <!-- EMAIL AND PASSWORD BLOCK -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:alpha="0.7"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+            <com.imakancustomer.utils.CustomerTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_email"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_14ssp" />
+
+            <com.imakancustomer.utils.CustomerEditText
+                android:id="@+id/et_signin_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@null"
+                android:hint="@string/str_enter_email_here"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.imakancustomer.utils.CustomerTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/str_passwordhint"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_14ssp" />
+
+            <com.imakancustomer.utils.CustomerEditText
+                android:id="@+id/et_signin_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@null"
+                android:hint="@string/str_enter_password_here"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <!-- SIGN IN BLOACK -->
+        <com.imakancustomer.utils.CustomerButton
+            android:id="@+id/btn_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/colorGreen"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/str_sign_in"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12ssp" />
+        <!-- FORGOT TEXT BLOCK -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.imakancustomer.utils.CustomerTextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_forgot_password"
+                android:textColor="@color/colorLighBlack"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.imakancustomer.utils.CustomerTextViewBold
+                android:id="@+id/tv_signin_forgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:text="@string/str_here"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <!-- FACEBOOK BLOCK -->
+        <com.imakancustomer.utils.CustomerButton
+            android:id="@+id/btn_fb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/colorFb"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/str_fb"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="visible" />
+
+        <!-- GOOGLE BLOCK-->
+        <com.imakancustomer.utils.CustomerButton
+            android:id="@+id/btn_google"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/colorGoogle"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/str_google"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="visible" />
+
+        <!-- SIGN UP TEXT BLOCK -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.imakancustomer.utils.CustomerTextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_don_t_have_an_account"
+                android:textColor="@color/colorLighBlack"
+                android:textSize="@dimen/_12ssp" />
+
+            <com.imakancustomer.utils.CustomerTextViewBold
+                android:id="@+id/tv_signin_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:text="@string/str_here"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/promo"
+    tools:context=".ui.promo_code.PromoCodeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <com.imakancustomer.utils.CustomerEditText
+            android:id="@+id/et_promo_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:hint="@string/str_enter_code_here"
+            android:padding="@dimen/_15sdp"
+            android:textColorHint="@color/colorGray2"
+            android:textSize="@dimen/_15ssp" />
+
+        <com.imakancustomer.utils.CustomerButton
+            android:id="@+id/btn_promo_apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/colorGreen"
+            android:text="@string/str_apply_now"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</RelativeLayout>
